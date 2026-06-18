@@ -51,9 +51,22 @@ a {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   font-size: 0.95rem;
   font-weight: 750;
   white-space: nowrap;
+}
+
+.brand-icon {
+  width: 28px;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  border: 1px solid rgba(217, 222, 217, 0.75);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  object-fit: cover;
 }
 
 .header-actions {
@@ -274,18 +287,6 @@ h3 {
   object-fit: cover;
 }
 
-.profile-icon {
-  width: 58px;
-  aspect-ratio: 1;
-  margin-top: -42px;
-  margin-right: -10px;
-  border: 3px solid rgba(255, 255, 255, 0.94);
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 12px 24px rgba(23, 32, 38, 0.12);
-  object-fit: cover;
-}
-
 .image-fallback {
   display: inline-grid;
   place-items: center;
@@ -293,9 +294,8 @@ h3 {
   font-weight: 850;
 }
 
-.image-fallback.profile-icon {
-  color: var(--rose);
-  font-size: 0.7rem;
+.image-fallback.brand-icon {
+  font-size: 0.68rem;
 }
 
 #signalCanvas {
@@ -505,6 +505,56 @@ h3 {
   color: #f7faf8;
 }
 
+.pdf-frame {
+  width: 100%;
+  min-height: min(760px, 82vh);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.resource-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.resource-card:hover,
+.resource-card:focus-visible {
+  border-color: rgba(31, 111, 104, 0.45);
+  box-shadow: 0 10px 28px rgba(23, 32, 38, 0.08);
+  transform: translateY(-1px);
+}
+
+.resource-card strong {
+  display: block;
+  color: var(--accent-strong);
+}
+
+.resource-card span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.callout {
+  border-left: 3px solid var(--accent);
+  padding: 14px 0 14px 18px;
+  background: rgba(31, 111, 104, 0.06);
+}
+
 .math-block {
   overflow-x: auto;
   border-left: 3px solid var(--gold);
@@ -626,18 +676,14 @@ h3 {
     width: 128px;
   }
 
-  .profile-icon {
-    width: 48px;
-    margin-top: -34px;
-  }
-
   .hero-actions,
   .button {
     width: 100%;
   }
 
   .research-grid,
-  .item-list {
+  .item-list,
+  .resource-grid {
     grid-template-columns: 1fr;
   }
 

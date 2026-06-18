@@ -13,7 +13,16 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="回到首頁" data-i18n-attr="aria-label:nav.home">Terry Chien</a>
+      <a class="brand" href="#top" aria-label="回到首頁" data-i18n-attr="aria-label:nav.home">
+        <img
+          class="brand-icon"
+          src="assets/images/icon/icon.png"
+          alt=""
+          aria-hidden="true"
+          data-image-fallback="TC"
+        >
+        <span>Terry Chien</span>
+      </a>
       <div class="header-actions">
         <nav class="site-nav" aria-label="主要導覽" data-i18n-attr="aria-label:nav.label">
           <a href="#about" data-i18n="nav.about">About</a>
@@ -54,13 +63,6 @@
               src="assets/images/profile/profile.jpg"
               alt="Terry Chien"
               data-image-fallback="TC"
-            >
-            <img
-              class="profile-icon"
-              src="assets/images/icon/icon.png"
-              alt=""
-              aria-hidden="true"
-              data-image-fallback="icon"
             >
           </div>
           <canvas id="signalCanvas" width="720" height="520"></canvas>

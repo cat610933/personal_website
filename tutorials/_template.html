@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template Title | Terry Chien</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="article-shell">
+      <nav class="article-nav" aria-label="Tutorial navigation">
+        <a href="../index.html#tutorials">Back to tutorials</a>
+        <a href="../index.html">Home</a>
+      </nav>
+
+      <header class="article-header">
+        <p class="eyebrow">Tutorial</p>
+        <h1>Template Title</h1>
+        <p class="article-meta">Topic / method / date</p>
+      </header>
+
+      <article class="article-content">
+        <section>
+          <h2>Overview</h2>
+          <p>
+            Write the main motivation and problem statement here. This is the
+            place for plain text, intuition, and the outline of the page.
+          </p>
+          <p class="callout">
+            Tip: copy this file, rename it, then update the title, sections,
+            PDF path, and resource links.
+          </p>
+        </section>
+
+        <section>
+          <h2>Math / Derivation</h2>
+          <p>
+            Put derivations in text, HTML, images, or a PDF. For quick notes,
+            inline text plus a math block is usually enough.
+          </p>
+          <div class="math-block">y = A x + n</div>
+        </section>
+
+        <section>
+          <h2>Code Simulation</h2>
+          <p>
+            Keep runnable code in <code>../assets/code/</code>. You can also
+            paste small snippets directly in the page.
+          </p>
+          <pre><code>import numpy as np
+
+x = np.linspace(0, 1, 1000)
+signal = np.sin(2 * np.pi * 8 * x)</code></pre>
+        </section>
+
+        <section>
+          <h2>PDF Preview</h2>
+          <p>
+            Put a PDF in <code>../assets/pdfs/</code>, then update the
+            <code>src</code> below.
+          </p>
+          <iframe
+            class="pdf-frame"
+            src="../assets/pdfs/example.pdf"
+            title="PDF preview"
+          ></iframe>
+        </section>
+
+        <section>
+          <h2>Downloads</h2>
+          <div class="resource-grid">
+            <a class="resource-card" href="../assets/pdfs/example.pdf" download>
+              <strong>Download PDF</strong>
+              <span>Derivation or lecture note</span>
+            </a>
+            <a class="resource-card" href="../assets/code/example.py" download>
+              <strong>Download code</strong>
+              <span>Python / MATLAB simulation file</span>
+            </a>
+            <a class="resource-card" href="../assets/downloads/example.zip" download>
+              <strong>Download package</strong>
+              <span>Figures, data, or supplementary files</span>
+            </a>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

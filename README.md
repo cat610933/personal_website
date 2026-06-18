@@ -38,7 +38,8 @@ http://localhost:8080
 - 在 `scripts/site-data.js` 的 `publications` 陣列修改論文與發表。
 - 中英文切換文字主要在 `scripts/site-data.js` 的 `translations` 物件裡修改。
 - 新增 tutorial 頁面時，建議放在 `tutorials/`，並在 `scripts/site-data.js` 的 `tutorials` 陣列加入連結。
-- code、圖片、公式等素材可分別放在 `assets/code/`、`assets/images/`、`assets/formulas/`。
+- 可以從 `tutorials/_template.html` 複製一份，作為新 tutorial 頁面的固定模板。
+- code、圖片、PDF、下載包、公式等素材可分別放在 `assets/code/`、`assets/images/`、`assets/pdfs/`、`assets/downloads/`、`assets/formulas/`。
 - 首頁個人照放在 `assets/images/profile/profile.jpg`。
 - 首頁小 icon 放在 `assets/images/icon/icon.png`。
 - 如果要公開 email，可以在 `index.html` 的 Contact 區塊加入 `mailto:` 連結。
@@ -102,6 +103,39 @@ assets/images/icon/icon.png
 建議：
 
 - `profile.jpg`：使用正方形圖片，至少 `600 x 600`，網站會自動裁成圓形。
-- `icon.png`：使用正方形圖片，建議透明背景 PNG，至少 `256 x 256`。
+- `icon.png`：使用正方形圖片，建議透明背景 PNG，至少 `256 x 256`，會顯示在左上角名字旁邊。
 - 檔名要完全一樣；如果換檔名，要同步改 `index.html` 裡的 `src`。
 - 圖片還沒放進去時，網站會顯示簡單 placeholder，不會破圖。
+
+## Tutorial 頁面模板
+
+新增可放文字、PDF 預覽、下載資源的頁面時：
+
+1. 複製 `tutorials/_template.html`。
+2. 改名，例如 `tutorials/my-topic.html`。
+3. 在新檔裡修改標題、文字、PDF iframe 的 `src`、下載連結。
+4. 如果要讓首頁 tutorial 卡片連到這頁，到 `scripts/site-data.js` 的 `tutorials` 陣列新增一筆：
+
+```js
+{
+  title: { zh: "我的主題", en: "My Topic" },
+  meta: { zh: "Simulation / derivation", en: "Simulation / derivation" },
+  description: {
+    zh: "這裡放中文簡介。",
+    en: "Short English summary.",
+  },
+  href: "tutorials/my-topic.html",
+}
+```
+
+PDF 可以放在：
+
+```text
+assets/pdfs/my-note.pdf
+```
+
+然後在頁面中使用：
+
+```html
+<iframe class="pdf-frame" src="../assets/pdfs/my-note.pdf" title="PDF preview"></iframe>
+```
