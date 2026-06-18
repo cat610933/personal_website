@@ -6,54 +6,61 @@
     <meta
       name="description"
       content="Cheng-Hsuan Chien 的個人網站，整理研究方向、專案、發表與聯絡資訊。"
+      data-i18n-attr="content:meta.description"
     >
     <title>Cheng-Hsuan Chien | Personal Website</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="回到首頁">Cheng-Hsuan Chien</a>
-      <nav class="site-nav" aria-label="主要導覽">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <a class="brand" href="#top" aria-label="回到首頁" data-i18n-attr="aria-label:nav.home">Cheng-Hsuan Chien</a>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="主要導覽" data-i18n-attr="aria-label:nav.label">
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#experience" data-i18n="nav.experience">Experience</a>
+          <a href="#research" data-i18n="nav.research">Research</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#publications" data-i18n="nav.publications">Publications</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="language-switch" role="group" aria-label="語言切換" data-i18n-attr="aria-label:language.label">
+          <button class="language-option is-active" type="button" data-lang="zh">中</button>
+          <button class="language-option" type="button" data-lang="en">EN</button>
+        </div>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero section-band">
         <div class="hero-copy">
-          <p class="eyebrow">Personal academic portfolio</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Personal academic portfolio</p>
           <h1>Cheng-Hsuan Chien</h1>
-          <p class="hero-subtitle">
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
             Master's student in Communication Engineering and Signal Processing.
           </p>
-          <p class="hero-text">
+          <p class="hero-text" data-i18n="hero.text">
             這裡會整理我的研究方向、專案紀錄、發表與履歷。第一版先用免費靜態網站架構，之後可以逐步加入 CV、論文頁面或部落格。
           </p>
-          <div class="hero-actions" aria-label="快速連結">
-            <a class="button primary" href="#contact">Contact</a>
+          <div class="hero-actions" aria-label="快速連結" data-i18n-attr="aria-label:hero.actionsLabel">
+            <a class="button primary" href="#contact" data-i18n="nav.contact">Contact</a>
             <a class="button secondary" href="https://github.com/cat610933">GitHub</a>
           </div>
         </div>
-        <div class="hero-visual" aria-label="Signal processing visualization">
+        <div class="hero-visual" aria-label="Signal processing visualization" data-i18n-attr="aria-label:hero.visualLabel">
           <canvas id="signalCanvas" width="720" height="520"></canvas>
         </div>
       </section>
 
       <section id="about" class="content-section">
         <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2>關於我</h2>
+          <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+          <h2 data-i18n="about.title">關於我</h2>
         </div>
         <div class="text-block">
-          <p>
+          <p data-i18n="about.body1">
             我目前專注於通訊工程、訊號處理與陣列設計相關主題，並持續整理研究、模擬與工程實作中的筆記與成果。
           </p>
-          <p>
+          <p data-i18n="about.body2">
             網站設計保持簡潔、可讀、容易維護，適合放在履歷、GitHub profile、論文 project page 或申請資料中。
           </p>
         </div>
@@ -61,16 +68,16 @@
 
       <section id="experience" class="content-section section-band">
         <div class="section-heading">
-          <p class="eyebrow">Experience</p>
-          <h2>經歷</h2>
+          <p class="eyebrow" data-i18n="experience.eyebrow">Experience</p>
+          <h2 data-i18n="experience.title">經歷</h2>
         </div>
-        <div class="timeline" aria-label="Experience timeline">
+        <div class="timeline" aria-label="Experience timeline" data-i18n-attr="aria-label:experience.timelineLabel">
           <article class="timeline-item">
             <p class="timeline-date">2025/07 - 2025/08</p>
             <div>
-              <h3>5G PHY 通訊演算法實習生</h3>
+              <h3 data-i18n="experience.mediatek.role">5G PHY 通訊演算法實習生</h3>
               <p class="timeline-place">MediaTek</p>
-              <p>
+              <p data-i18n="experience.mediatek.description">
                 參與 5G PHY 通訊演算法相關實作與分析，累積無線通訊系統與工程開發經驗。
               </p>
             </div>
@@ -80,7 +87,7 @@
             <div>
               <h3>College Project</h3>
               <p class="timeline-place">Institute of Atomic and Molecular Sciences (IAMS), Academia Sinica</p>
-              <p>
+              <p data-i18n="experience.project.description">
                 延續原子與分子物理相關研究主題，進行專題研究、文獻整理與實驗/理論分析。
               </p>
             </div>
@@ -90,7 +97,7 @@
             <div>
               <h3>Research Intern</h3>
               <p class="timeline-place">Institute of Atomic and Molecular Sciences (IAMS), Academia Sinica</p>
-              <p>
+              <p data-i18n="experience.intern.description">
                 於中研院原子與分子科學研究所參與暑期實習，接觸研究流程與量子/原子系統相關題目。
               </p>
             </div>
@@ -100,52 +107,52 @@
 
       <section id="research" class="content-section section-band">
         <div class="section-heading">
-          <p class="eyebrow">Research</p>
-          <h2>研究方向</h2>
+          <p class="eyebrow" data-i18n="research.eyebrow">Research</p>
+          <h2 data-i18n="research.title">研究方向</h2>
         </div>
         <div class="research-grid">
           <article>
             <h3>Sparse array design</h3>
-            <p>探索稀疏陣列配置、自由度與成像或估測效能之間的關係。</p>
+            <p data-i18n="research.sparse">探索稀疏陣列配置、自由度與成像或估測效能之間的關係。</p>
           </article>
           <article>
             <h3>Signal processing</h3>
-            <p>整理通訊與陣列訊號處理中的模型、演算法與模擬工具。</p>
+            <p data-i18n="research.signal">整理通訊與陣列訊號處理中的模型、演算法與模擬工具。</p>
           </article>
           <article>
             <h3>Array optimization</h3>
-            <p>以最佳化方法搜尋具備限制條件的陣列結構與效能指標。</p>
+            <p data-i18n="research.optimization">以最佳化方法搜尋具備限制條件的陣列結構與效能指標。</p>
           </article>
           <article>
             <h3>Wireless communications</h3>
-            <p>建立無線通訊系統模擬與分析，連結理論與實驗結果。</p>
+            <p data-i18n="research.wireless">建立無線通訊系統模擬與分析，連結理論與實驗結果。</p>
           </article>
         </div>
       </section>
 
       <section id="projects" class="content-section">
         <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2>專案</h2>
+          <p class="eyebrow" data-i18n="projects.eyebrow">Projects</p>
+          <h2 data-i18n="projects.title">專案</h2>
         </div>
         <div id="projectList" class="item-list" aria-live="polite"></div>
       </section>
 
       <section id="publications" class="content-section section-band">
         <div class="section-heading">
-          <p class="eyebrow">Publications</p>
-          <h2>論文與發表</h2>
+          <p class="eyebrow" data-i18n="publications.eyebrow">Publications</p>
+          <h2 data-i18n="publications.title">論文與發表</h2>
         </div>
         <div id="publicationList" class="item-list" aria-live="polite"></div>
       </section>
 
       <section id="contact" class="content-section contact-section">
         <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>聯絡方式</h2>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+          <h2 data-i18n="contact.title">聯絡方式</h2>
         </div>
         <div class="contact-layout">
-          <p>
+          <p data-i18n="contact.body">
             歡迎透過 GitHub 聯絡我。正式上線前，可以再補上 email、CV 連結與其他社群連結。
           </p>
           <div class="contact-links">
@@ -156,7 +163,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Cheng-Hsuan Chien. Built with static HTML, CSS, and JavaScript.</p>
+      <p>&copy; <span id="year"></span> <span data-i18n="footer.text">Cheng-Hsuan Chien. Built with static HTML, CSS, and JavaScript.</span></p>
     </footer>
 
     <script src="script.js"></script>
