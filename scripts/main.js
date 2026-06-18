@@ -1,5 +1,10 @@
-const { translations, projects, tutorials, publications } = window.siteData;
 const storageKey = "preferredLanguage";
+
+let translations;
+let projects;
+let tutorials;
+let publications;
+let currentLanguage = "zh";
 
 function getStoredLanguage() {
   try {
@@ -16,9 +21,6 @@ function storeLanguage(language) {
     // Language switching should still work when storage is unavailable.
   }
 }
-
-let currentLanguage = getStoredLanguage() || "zh";
-if (!translations[currentLanguage]) currentLanguage = "zh";
 
 function localize(value) {
   if (typeof value === "string") return value;
@@ -216,10 +218,29 @@ function setLanguage(language) {
   drawSignalCanvas();
 }
 
-document.querySelectorAll(".language-option").forEach((button) => {
-  button.addEventListener("click", () => setLanguage(button.dataset.lang));
-});
+async function initSite() {
+  await window.loadSiteData();
+  ({ translations, projects, tutorials, publications } = window.siteData);
 
-setupImageFallbacks();
-document.getElementById("year").textContent = new Date().getFullYear();
-setLanguage(currentLanguage);
+  currentLanguage = getStoredLanguage() || "zh";
+  if (!translations[currentLanguage]) currentLanguage = "zh";
+
+  document.querySelectorAll(".language-option").forEach((button) => {
+    button.addEventListener("click", () => setLanguage(button.dataset.lang));
+  });
+
+  setupImageFallbacks();
+  document.getElementById("year").textContent = new Date().getFullYear();
+  setLanguage(currentLanguage);
+}
+
+initSite().catch((error) => {
+  console.error(error);
+  const main = document.querySelector("main");
+  if (main) {
+    main.insertAdjacentHTML(
+      "afterbegin",
+      '<p class="load-error">Unable to load site data. Run <code>make preview</code> instead of opening the file directly.</p>',
+    );
+  }
+});

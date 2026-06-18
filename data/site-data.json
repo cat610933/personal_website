@@ -1,0 +1,229 @@
+{
+  "translations": {
+    "zh": {
+      "meta.description": "Terry Chien 的個人網站，整理研究方向、專案、教學筆記、發表與聯絡資訊。",
+      "nav.home": "回到首頁",
+      "nav.label": "主要導覽",
+      "nav.about": "About",
+      "nav.experience": "Experience",
+      "nav.research": "Research",
+      "nav.projects": "Projects",
+      "nav.tutorials": "Tutorials",
+      "nav.publications": "Publications",
+      "nav.contact": "Contact",
+      "language.label": "語言切換",
+      "hero.eyebrow": "Personal academic portfolio",
+      "hero.subtitle": "通訊工程與訊號處理碩士生",
+      "hero.text": "這裡整理我的研究方向、專案紀錄、發表與經歷。網站以免費靜態架構維護，之後可以逐步加入 CV、論文頁面或部落格。",
+      "hero.actionsLabel": "快速連結",
+      "hero.visualLabel": "訊號處理視覺化",
+      "about.eyebrow": "About",
+      "about.title": "關於我",
+      "about.body1": "我目前專注於通訊工程、訊號處理與陣列設計相關主題，並持續整理研究、模擬與工程實作中的筆記與成果。",
+      "about.body2": "網站設計保持簡潔、可讀、容易維護，適合放在履歷、GitHub profile、論文 project page 或申請資料中。",
+      "experience.eyebrow": "Experience",
+      "experience.title": "經歷",
+      "experience.timelineLabel": "經歷時間軸",
+      "experience.mediatek.role": "5G PHY 通訊演算法實習生",
+      "experience.mediatek.description": "參與 5G PHY 通訊演算法相關實作與分析，累積無線通訊系統與工程開發經驗。",
+      "experience.project.description": "延續原子與分子物理相關研究主題，進行專題研究、文獻整理與實驗/理論分析。",
+      "experience.intern.description": "於中研院原子與分子科學研究所參與暑期實習，接觸研究流程與量子/原子系統相關題目。",
+      "research.eyebrow": "Research",
+      "research.title": "研究方向",
+      "research.sparse": "探索稀疏陣列配置、自由度與成像或估測效能之間的關係。",
+      "research.signal": "整理通訊與陣列訊號處理中的模型、演算法與模擬工具。",
+      "research.optimization": "以最佳化方法搜尋具備限制條件的陣列結構與效能指標。",
+      "research.wireless": "建立無線通訊系統模擬與分析，連結理論與實驗結果。",
+      "projects.eyebrow": "Projects",
+      "projects.title": "專案",
+      "tutorials.eyebrow": "Tutorials",
+      "tutorials.title": "教學筆記",
+      "publications.eyebrow": "Publications",
+      "publications.title": "論文與發表",
+      "contact.eyebrow": "Contact",
+      "contact.title": "聯絡方式",
+      "contact.body": "歡迎透過 GitHub 聯絡我。正式上線前，可以再補上 email、CV 連結與其他社群連結。",
+      "footer.text": "Terry Chien. 使用靜態 HTML、CSS 與 JavaScript 建置。"
+    },
+    "en": {
+      "meta.description": "Personal website of Terry Chien, featuring research interests, projects, tutorials, publications, and contact information.",
+      "nav.home": "Back to home",
+      "nav.label": "Primary navigation",
+      "nav.about": "About",
+      "nav.experience": "Experience",
+      "nav.research": "Research",
+      "nav.projects": "Projects",
+      "nav.tutorials": "Tutorials",
+      "nav.publications": "Publications",
+      "nav.contact": "Contact",
+      "language.label": "Language switcher",
+      "hero.eyebrow": "Personal academic portfolio",
+      "hero.subtitle": "Master's student in Communication Engineering and Signal Processing.",
+      "hero.text": "This site collects my research interests, project notes, publications, and experience. It is maintained as a free static website and can later grow into a CV, paper pages, or a blog.",
+      "hero.actionsLabel": "Quick links",
+      "hero.visualLabel": "Signal processing visualization",
+      "about.eyebrow": "About",
+      "about.title": "About Me",
+      "about.body1": "I focus on communication engineering, signal processing, and array design, while documenting research notes, simulations, and engineering work.",
+      "about.body2": "The site is designed to stay clean, readable, and easy to maintain for CVs, GitHub profiles, project pages, and application materials.",
+      "experience.eyebrow": "Experience",
+      "experience.title": "Experience",
+      "experience.timelineLabel": "Experience timeline",
+      "experience.mediatek.role": "5G PHY Communication Algorithm Intern",
+      "experience.mediatek.description": "Worked on implementation and analysis related to 5G PHY communication algorithms, gaining experience in wireless systems and engineering development.",
+      "experience.project.description": "Continued research work related to atomic and molecular physics, including literature review, project development, and theoretical or experimental analysis.",
+      "experience.intern.description": "Participated in a summer research internship at IAMS, Academia Sinica, and worked on topics related to quantum and atomic systems.",
+      "research.eyebrow": "Research",
+      "research.title": "Research Interests",
+      "research.sparse": "Exploring sparse array configurations and the relationship between degrees of freedom, imaging, and estimation performance.",
+      "research.signal": "Studying models, algorithms, and simulation tools in communication and array signal processing.",
+      "research.optimization": "Using optimization methods to search for constrained array structures and performance metrics.",
+      "research.wireless": "Building wireless communication simulations and analysis that connect theory with experimental results.",
+      "projects.eyebrow": "Projects",
+      "projects.title": "Projects",
+      "tutorials.eyebrow": "Tutorials",
+      "tutorials.title": "Tutorials",
+      "publications.eyebrow": "Publications",
+      "publications.title": "Publications",
+      "contact.eyebrow": "Contact",
+      "contact.title": "Contact",
+      "contact.body": "Feel free to reach out through GitHub. Email, CV, and additional social links can be added before the site is finalized.",
+      "footer.text": "Terry Chien. Built with static HTML, CSS, and JavaScript."
+    }
+  },
+  "projects": [
+    {
+      "title": {
+        "zh": "Sparse array optimization",
+        "en": "Sparse array optimization"
+      },
+      "meta": {
+        "zh": "Research project",
+        "en": "Research project"
+      },
+      "description": {
+        "zh": "與稀疏陣列設計、模擬和效能評估相關的研究筆記與實作。",
+        "en": "Research notes and simulations related to sparse array design and performance evaluation."
+      },
+      "links": [
+        {
+          "label": "Code",
+          "href": "https://github.com/cat610933"
+        }
+      ]
+    },
+    {
+      "title": {
+        "zh": "Wireless communication simulation",
+        "en": "Wireless communication simulation"
+      },
+      "meta": {
+        "zh": "Wireless communications",
+        "en": "Wireless communications"
+      },
+      "description": {
+        "zh": "通道模型、系統設定與通訊效能分析相關的模擬工作。",
+        "en": "Simulation work for channel modeling, system settings, and communication performance analysis."
+      }
+    },
+    {
+      "title": {
+        "zh": "MATLAB and Python tools",
+        "en": "MATLAB and Python tools"
+      },
+      "meta": {
+        "zh": "Engineering utilities",
+        "en": "Engineering utilities"
+      },
+      "description": {
+        "zh": "用於實驗、圖表與可重現分析的小型 scripts 和 notebooks。",
+        "en": "Small scripts and notebooks for experiments, figures, and reproducible analysis."
+      },
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/cat610933"
+        }
+      ]
+    }
+  ],
+  "tutorials": [
+    {
+      "title": {
+        "zh": "Code simulations",
+        "en": "Code simulations"
+      },
+      "meta": {
+        "zh": "Python / MATLAB / reproducible examples",
+        "en": "Python / MATLAB / reproducible examples"
+      },
+      "description": {
+        "zh": "整理我關注的通訊、訊號處理與量子系統主題，搭配可重現的程式模擬與圖表。",
+        "en": "Notes on communication, signal processing, and quantum-system topics with reproducible code simulations and figures."
+      },
+      "href": "tutorials/code-simulations.html"
+    },
+    {
+      "title": {
+        "zh": "Mathematical derivations",
+        "en": "Mathematical derivations"
+      },
+      "meta": {
+        "zh": "Models / proofs / intuition",
+        "en": "Models / proofs / intuition"
+      },
+      "description": {
+        "zh": "這邊用來測試",
+        "en": "Modeling notes, derivations, and intuition that connect problem setup to computable forms."
+      },
+      "href": "tutorials/math-derivations.html"
+    },
+    {
+      "title": {
+        "zh": "Research reading notes",
+        "en": "Research reading notes"
+      },
+      "meta": {
+        "zh": "Papers / implementation details / open questions",
+        "en": "Papers / implementation details / open questions"
+      },
+      "description": {
+        "zh": "記錄論文閱讀、實作細節與還想追的問題，之後可逐步擴充成獨立文章。",
+        "en": "Short notes on papers, implementation details, and open questions that can later grow into standalone articles."
+      },
+      "href": "tutorials/research-reading-notes.html"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Generating scalable graph states in an atom-nanophotonic interface",
+      "meta": "Quantum Science and Technology 9 (2), 025020 - 2024",
+      "description": "CH Chien, S Goswami, CC Wu, WS Hiew, YC Chen, HH Jen",
+      "links": [
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1088/2058-9565/ad33ad"
+        },
+        {
+          "label": "arXiv",
+          "href": "https://arxiv.org/abs/2310.03990"
+        }
+      ]
+    },
+    {
+      "title": "Efficient and high-fidelity entanglement in cavity QED without high cooperativity",
+      "meta": "Physical Review Letters 136, 050802 - 2026",
+      "description": "S Goswami, CH Chien, N Sinclair, B Grinkemeyer, S Bennetts, YC Chen, HH Jen",
+      "links": [
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1103/n9wg-k6q9"
+        },
+        {
+          "label": "arXiv",
+          "href": "https://arxiv.org/abs/2505.02702"
+        }
+      ]
+    }
+  ]
+}

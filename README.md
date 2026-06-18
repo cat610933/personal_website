@@ -8,6 +8,8 @@
 - `styles.css`：版面、顏色、響應式設計
 - `scripts/site-data.js`：中英文文案、專案、教學筆記、論文資料
 - `scripts/main.js`：語言切換、卡片 render、首頁視覺化 canvas
+- `data/site-data.json`：網站實際使用的資料；本機 editor 會修改這個檔案
+- `tools/site_editor.py`：本機網站管理 GUI
 - `tutorials/`：教學筆記與文章頁面
 - `assets/`：之後放 code、圖片、公式等可被頁面 include 的檔案
 - `codex可以讀的說明`：網站建置方向與給 Codex 的需求說明
@@ -16,28 +18,49 @@
 
 最簡單的方式是直接用瀏覽器打開 `index.html`。
 
-也可以在此資料夾執行：
+建議在此資料夾執行：
 
 ```bash
-python3 -m http.server 8080
+make preview
 ```
 
-然後開啟：
+它會自動開啟 `http://localhost:8080`。
+
+## 本機 GUI 編輯器
+
+如果不想直接改底層 HTML / JSON，可以執行：
+
+```bash
+make editor
+```
+
+它會自動開啟：
 
 ```text
-http://localhost:8080
+http://localhost:8099/editor
 ```
+
+目前 GUI 支援：
+
+- 查看網站結構
+- 新增 tutorial 頁面
+- 編輯 tutorial 首頁卡片文字與連結
+- 刪除 tutorial 頁面
+- 上傳 PDF、code、圖片、公式素材、下載包
+- 刪除已上傳素材
+- 直接編輯 raw `data/site-data.json`
+
+停止 GUI 時，在終端機按 `Ctrl+C`。
 
 ## 修改內容
 
 常改的位置：
 
 - 在 `index.html` 修改姓名、About、Experience、Research、Contact 文字。
-- 在 `scripts/site-data.js` 的 `projects` 陣列修改專案卡片。
-- 在 `scripts/site-data.js` 的 `tutorials` 陣列修改教學筆記卡片。卡片有 `href` 時，整張卡片會可以點。
-- 在 `scripts/site-data.js` 的 `publications` 陣列修改論文與發表。
-- 中英文切換文字主要在 `scripts/site-data.js` 的 `translations` 物件裡修改。
-- 新增 tutorial 頁面時，建議放在 `tutorials/`，並在 `scripts/site-data.js` 的 `tutorials` 陣列加入連結。
+- 在 GUI 裡修改 tutorial 是最簡單的方式。
+- 如果手動改資料，請改 `data/site-data.json`。
+- `projects`、`tutorials`、`publications`、`translations` 都在 `data/site-data.json`。
+- 新增 tutorial 頁面時，建議放在 `tutorials/`，並在 `data/site-data.json` 的 `tutorials` 陣列加入連結。
 - 可以從 `tutorials/_template.html` 複製一份，作為新 tutorial 頁面的固定模板。
 - code、圖片、PDF、下載包、公式等素材可分別放在 `assets/code/`、`assets/images/`、`assets/pdfs/`、`assets/downloads/`、`assets/formulas/`。
 - 首頁個人照放在 `assets/images/profile/profile.jpg`。
@@ -114,7 +137,7 @@ assets/images/icon/icon.png
 1. 複製 `tutorials/_template.html`。
 2. 改名，例如 `tutorials/my-topic.html`。
 3. 在新檔裡修改標題、文字、PDF iframe 的 `src`、下載連結。
-4. 如果要讓首頁 tutorial 卡片連到這頁，到 `scripts/site-data.js` 的 `tutorials` 陣列新增一筆：
+4. 如果要讓首頁 tutorial 卡片連到這頁，到 `data/site-data.json` 的 `tutorials` 陣列新增一筆：
 
 ```js
 {
