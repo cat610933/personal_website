@@ -1,0 +1,359 @@
+這個檔案描述如何做出個人網站
+建構初期請讀，網站建構後則斟酌參考
+
+我想要用codex來建立一個自己的網站 可以告訴我大概流程嗎 比如需要網域還是啥的 然後我要怎麼下指令給我的codex 我希望完全免費
+
+我會把它拆成「免費網站需要哪些東西」和「怎麼叫 Codex 幫你做」兩塊；因為平台與免費方案常變，我先確認一下目前常見方案的限制。
+
+已思考 5s
+
+可以，而且完全免費最簡單的路線是：
+
+Codex 幫你寫網站 → GitHub 放程式碼 → GitHub Pages / Cloudflare Pages / Vercel 免費部署 → 用免費子網域上線
+
+你不一定需要買網域。買網域只是讓網址變成 yourname.com，但這通常不是免費的。免費方案會給你類似：
+
+GitHub Pages：你的帳號.github.io
+Vercel：你的專案.vercel.app
+Cloudflare Pages：你的專案.pages.dev
+
+Codex 目前可以用 ChatGPT 帳號使用，OpenAI 官方說 Codex 是幫你寫、review、ship code 的 coding agent，而且 Free plan 也包含 Codex，只是使用量會依方案不同。
+
+1. 你需要準備什麼？
+
+最低限度只需要：
+
+GitHub 帳號
+Codex
+一個免費部署平台
+網站內容想法
+
+不需要一開始就買網域、不需要伺服器、不需要付錢買 hosting。
+
+我會建議你第一個網站先做成：
+
+靜態個人網站 / portfolio / blog landing page
+
+例如包含：
+
+首頁
+About me
+Projects
+Research / Publications
+CV download
+Contact
+
+這種網站不需要後端、不需要資料庫，所以最容易免費維護。
+
+2. 免費部署平台怎麼選？
+最推薦：GitHub Pages
+
+適合：個人網站、履歷網站、研究頁面、簡單部落格。
+
+GitHub Pages 支援免費用 GitHub repo 發佈網站，也可以之後綁自訂網域。官方文件也說 GitHub Pages 可用 custom domain，且 GitHub Pages 網站支援 HTTPS。
+
+優點是簡單、穩、完全夠用。缺點是比較偏靜態網站，不適合複雜後端功能。
+
+也很推薦：Vercel
+
+適合：Next.js、React 網站、比較現代的前端專案。
+
+Vercel Hobby plan 是免費方案，官方寫明是給 personal projects / developers 用，也有自動部署、HTTPS、preview deployments 等功能。
+
+優點是很適合現代前端，Codex 產生 Next.js 專案後可以很快部署。缺點是免費方案有用量限制，雖然個人網站通常不會撞到。
+
+Cloudflare Pages
+
+適合：靜態網站、速度快、免費額度大。
+
+Cloudflare Pages 免費方案有 unlimited sites、unlimited static requests、unlimited bandwidth，以及每月 500 builds。
+
+優點是免費額度很漂亮。缺點是第一次設定 DNS / Pages 可能比 GitHub Pages 稍微多一點概念。
+
+3. 我建議你的第一條路線
+
+你想完全免費，我會建議：
+
+GitHub Pages + Astro 或 Vite React
+
+但如果你想讓 Codex 比較好發揮，也可以用：
+
+Vercel + Next.js
+
+我個人比較建議你：
+
+路線 A：最簡單穩定
+
+GitHub Pages + 純 HTML/CSS/JS
+
+適合你只是要一個個人首頁。
+
+路線 B：比較現代、好看
+
+Vercel + Next.js + Tailwind CSS
+
+適合你想做得比較像正式 portfolio。
+
+以你背景來說，我會建議用 Next.js + Tailwind + Vercel。理由是 Codex 對這套很熟，而且之後要加 blog、project cards、論文頁面都方便。
+
+4. 大概流程
+Step 1：開一個 GitHub repo
+
+例如叫：
+
+personal-website
+Step 2：叫 Codex 建立專案
+
+你可以直接對 Codex 說：
+
+Create a personal academic portfolio website using Next.js and Tailwind CSS.
+
+Requirements:
+- Use TypeScript.
+- Make it deployable on Vercel.
+- Pages/sections:
+  1. Hero section with my name: Cheng-Hsuan Chien
+  2. About section
+  3. Research section
+  4. Projects section
+  5. Publications section
+  6. Contact section
+- Style: clean, minimal, academic but modern.
+- Make it responsive for mobile and desktop.
+- Do not use any paid service.
+- Add clear instructions in README.md for running locally and deploying to Vercel.
+
+如果你要中文網站，可以改成：
+
+Create a bilingual personal portfolio website using Next.js and Tailwind CSS.
+
+Requirements:
+- Main language: Traditional Chinese.
+- Also prepare English text placeholders.
+- Use TypeScript.
+- Make it deployable on Vercel.
+- Sections:
+  1. 首頁
+  2. 關於我
+  3. 研究方向
+  4. 專案
+  5. 論文與發表
+  6. 聯絡方式
+- Style: clean, minimal, academic, modern.
+- No paid services.
+- Add README instructions.
+Step 3：本機測試
+
+Codex 通常會告訴你跑：
+
+npm install
+npm run dev
+
+然後打開：
+
+http://localhost:3000
+Step 4：推到 GitHub
+git add .
+git commit -m "Initial personal website"
+git push
+Step 5：部署到 Vercel
+
+用 Vercel 登入 GitHub，import 你的 repo，按 deploy。
+
+之後每次你 git push，Vercel 會自動更新網站。
+
+5. 你要怎麼下指令給 Codex？
+
+重點是不要只說：
+
+幫我做一個網站
+
+這樣太模糊。你要把需求寫成「規格」。
+
+比較好的格式是：
+
+You are helping me build a free personal website.
+
+Goal:
+Build a clean academic portfolio website for me.
+
+Tech stack:
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Deploy on Vercel free plan
+
+Pages/sections:
+- Home
+- About
+- Research
+- Projects
+- Publications
+- Contact
+
+Design:
+- Minimal
+- Academic
+- Responsive
+- Use neutral colors
+- No paid assets or paid APIs
+
+Content:
+Use placeholders for now. Do not invent too many details.
+
+Tasks:
+1. Initialize the project.
+2. Implement the homepage.
+3. Add reusable components.
+4. Add README with local run and deployment instructions.
+5. Make sure npm run build passes.
+
+這種 Codex 比較容易一次做對。
+
+6. 之後要修改網站，可以這樣下指令
+
+例如你要加論文區：
+
+Add a Publications section to the homepage.
+
+Each publication card should include:
+- Title
+- Authors
+- Venue
+- Year
+- Links for paper / code / project page
+
+Use placeholder data in a separate TypeScript array so I can edit it easily later.
+
+要讓它變好看：
+
+Improve the visual design of the homepage.
+
+Keep it minimal and academic, but make the layout more polished.
+Add better spacing, typography, hover effects, and responsive behavior.
+Do not add heavy animations.
+
+要部署前檢查：
+
+Please review the whole project before deployment.
+
+Check:
+- npm run build passes
+- no TypeScript errors
+- no unused imports
+- responsive layout works
+- README deployment instructions are correct
+- no paid service dependency
+
+要幫你修 bug：
+
+The build failed with the following error:
+
+[paste error here]
+
+Please identify the cause and fix it with the smallest reasonable change.
+7. 完全免費的注意事項
+
+「完全免費」可以做到，但有幾個限制：
+
+第一，自訂網域通常不免費。免費網址可以用 vercel.app、github.io、pages.dev。如果你想要 chenghsuan.com 這種，通常要買 domain。
+
+第二，不要用需要後端的功能。例如會員登入、資料庫、留言板、寄信表單，這些可能牽涉免費額度或第三方服務。第一版建議全部做靜態。
+
+第三，Contact 表單不要一開始做真的寄信功能。最簡單是放 email link：
+
+mailto:你的信箱
+
+這樣完全免費，也不用後端。
+
+第四，圖片和 PDF 可以放 repo 裡，但不要放太大的檔案。CV PDF、少量圖片可以；大量影片不要。
+
+8. 我會建議你的第一版網站長這樣
+首頁
+├── Hero
+│   ├── Cheng-Hsuan Chien
+│   ├── Master's student in Communications / Signal Processing
+│   └── GitHub / Email / CV
+│
+├── About
+│   └── 簡短介紹你的背景
+│
+├── Research
+│   └── Sparse arrays, signal processing, array optimization
+│
+├── Projects
+│   ├── GBOA-SC array optimization
+│   ├── 5G link-level simulation
+│   └── MATLAB / Python tools
+│
+├── Publications
+│   └── paper list
+│
+└── Contact
+    └── email / GitHub / LinkedIn
+
+技術選擇：
+
+Next.js + TypeScript + Tailwind CSS + Vercel
+
+部署後網址大概會是：
+
+https://personal-website-xxx.vercel.app
+9. 可以直接丟給 Codex 的完整 prompt
+
+你可以複製這段：
+
+I want to build a completely free personal academic portfolio website.
+
+Please create a Next.js project using TypeScript and Tailwind CSS.
+
+Deployment target:
+- Vercel free Hobby plan
+- No paid services
+- No backend or database
+- No paid APIs
+
+Website structure:
+1. Hero section
+   - Name: Cheng-Hsuan Chien
+   - Subtitle: Master's student in Communication Engineering and Signal Processing
+   - Buttons: Email, GitHub, CV
+
+2. About section
+   - Use placeholder text for now
+
+3. Research section
+   - Topics:
+     - Sparse array design
+     - Signal processing
+     - Array optimization
+     - Wireless communications
+
+4. Projects section
+   - Use reusable project cards
+   - Put project data in a separate TypeScript array
+
+5. Publications section
+   - Use reusable publication cards
+   - Put publication data in a separate TypeScript array
+
+6. Contact section
+   - Use mailto link only
+   - Do not implement a backend contact form
+
+Design:
+- Clean, minimal, academic, modern
+- Responsive for mobile and desktop
+- Good spacing and typography
+- Avoid heavy animations
+
+Implementation requirements:
+- Use reusable components
+- Keep the code easy to edit
+- Add README.md with:
+  - how to run locally
+  - how to build
+  - how to deploy to Vercel
+- Make sure npm run build passes
+
+我的建議是你先不要買網域，先用免費的 vercel.app 或 github.io 網址把網站做起來。等你真的要放在 CV、論文頁、求職履歷上，再考慮花一年幾百塊台幣買自己的 domain。
