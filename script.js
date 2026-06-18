@@ -21,7 +21,21 @@ const projects = [
   },
 ];
 
-const publications = [];
+const publications = [
+  {
+    title:
+      "Atomic excitation delocalization at the clean to disordered interface in a chirally-coupled atomic array",
+    meta: "Physical Review Research 6 (1), 013159 - 2024",
+    description:
+      "CC Wu, KT Lin, I Handayana, CH Chien, S Goswami, GD Lin, YC Chen, ...",
+  },
+  {
+    title:
+      "Generating scalable graph states in an atom-nanophotonic interface",
+    meta: "Quantum Science and Technology 9 (2), 025020 - 2024",
+    description: "CH Chien, S Goswami, CC Wu, WS Hiew, YC Chen, HH Jen",
+  },
+];
 
 function createItemCard(item) {
   const article = document.createElement("article");
