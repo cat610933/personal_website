@@ -263,7 +263,25 @@ function createItemCard(item) {
   return article;
 }
 
-let currentLanguage = localStorage.getItem("preferredLanguage") || "zh";
+const storageKey = "preferredLanguage";
+
+function getStoredLanguage() {
+  try {
+    return localStorage.getItem(storageKey);
+  } catch {
+    return null;
+  }
+}
+
+function storeLanguage(language) {
+  try {
+    localStorage.setItem(storageKey, language);
+  } catch {
+    // Language switching should still work when storage is unavailable.
+  }
+}
+
+let currentLanguage = getStoredLanguage() || "zh";
 if (!translations[currentLanguage]) currentLanguage = "zh";
 
 function localize(value) {
@@ -389,7 +407,7 @@ function drawSignalCanvas() {
 function setLanguage(language) {
   if (!translations[language]) return;
   currentLanguage = language;
-  localStorage.setItem("preferredLanguage", currentLanguage);
+  storeLanguage(currentLanguage);
   translatePage();
   renderList("projectList", projects);
   renderList("tutorialList", tutorials);
