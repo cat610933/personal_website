@@ -106,6 +106,22 @@ function renderList(targetId, items) {
   items.forEach((item) => target.append(createItemCard(item)));
 }
 
+function setupImageFallbacks() {
+  document.querySelectorAll("[data-image-fallback]").forEach((image) => {
+    image.addEventListener(
+      "error",
+      () => {
+        const fallback = document.createElement("div");
+        fallback.className = `${image.className} image-fallback`;
+        fallback.textContent = image.dataset.imageFallback;
+        fallback.setAttribute("aria-hidden", image.getAttribute("aria-hidden") || "false");
+        image.replaceWith(fallback);
+      },
+      { once: true },
+    );
+  });
+}
+
 function drawSignalCanvas() {
   const canvas = document.getElementById("signalCanvas");
   if (!canvas) return;
@@ -204,5 +220,6 @@ document.querySelectorAll(".language-option").forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
 
+setupImageFallbacks();
 document.getElementById("year").textContent = new Date().getFullYear();
 setLanguage(currentLanguage);

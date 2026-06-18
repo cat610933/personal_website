@@ -39,6 +39,8 @@ http://localhost:8080
 - 中英文切換文字主要在 `scripts/site-data.js` 的 `translations` 物件裡修改。
 - 新增 tutorial 頁面時，建議放在 `tutorials/`，並在 `scripts/site-data.js` 的 `tutorials` 陣列加入連結。
 - code、圖片、公式等素材可分別放在 `assets/code/`、`assets/images/`、`assets/formulas/`。
+- 首頁個人照放在 `assets/images/profile/profile.jpg`。
+- 首頁小 icon 放在 `assets/images/icon/icon.png`。
 - 如果要公開 email，可以在 `index.html` 的 Contact 區塊加入 `mailto:` 連結。
 - 如果之後有 CV PDF，可以放到 repo 裡，例如 `assets/cv.pdf`，再把 CV 按鈕連到該檔案。
 
@@ -87,3 +89,19 @@ https://cat610933.github.io/
 - 自訂網域通常需要付費購買。
 - 這版沒有後端、資料庫、寄信表單，所以部署與維護成本最低。
 - Contact 先使用 `mailto:` 連結，完全免費。
+
+## 首頁圖片
+
+目前首頁已經預留兩個圖片位置：
+
+```text
+assets/images/profile/profile.jpg
+assets/images/icon/icon.png
+```
+
+建議：
+
+- `profile.jpg`：使用正方形圖片，至少 `600 x 600`，網站會自動裁成圓形。
+- `icon.png`：使用正方形圖片，建議透明背景 PNG，至少 `256 x 256`。
+- 檔名要完全一樣；如果換檔名，要同步改 `index.html` 裡的 `src`。
+- 圖片還沒放進去時，網站會顯示簡單 placeholder，不會破圖。
