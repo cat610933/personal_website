@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Cheng-Hsuan Chien 的個人網站，整理研究方向、專案、發表與聯絡資訊。"
+    >
+    <title>Cheng-Hsuan Chien | Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="回到首頁">Cheng-Hsuan Chien</a>
+      <nav class="site-nav" aria-label="主要導覽">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-band">
+        <div class="hero-copy">
+          <p class="eyebrow">Personal academic portfolio</p>
+          <h1>Cheng-Hsuan Chien</h1>
+          <p class="hero-subtitle">
+            Master's student in Communication Engineering and Signal Processing.
+          </p>
+          <p class="hero-text">
+            這裡會整理我的研究方向、專案紀錄、發表與履歷。第一版先用免費靜態網站架構，之後可以逐步加入 CV、論文頁面或部落格。
+          </p>
+          <div class="hero-actions" aria-label="快速連結">
+            <a class="button primary" href="mailto:your.email@example.com">Email</a>
+            <a class="button secondary" href="https://github.com/cat610933">GitHub</a>
+            <a class="button secondary" href="#" aria-disabled="true">CV coming soon</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Signal processing visualization">
+          <canvas id="signalCanvas" width="720" height="520"></canvas>
+        </div>
+      </section>
+
+      <section id="about" class="content-section">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>關於我</h2>
+        </div>
+        <div class="text-block">
+          <p>
+            我目前專注於通訊工程、訊號處理與陣列設計相關主題。這段文字可以先當作 placeholder，之後替換成你的學歷、研究興趣、實驗室、指導教授或正在進行的題目。
+          </p>
+          <p>
+            網站設計保持簡潔、可讀、容易維護，適合放在履歷、GitHub profile、論文 project page 或申請資料中。
+          </p>
+        </div>
+      </section>
+
+      <section id="research" class="content-section section-band">
+        <div class="section-heading">
+          <p class="eyebrow">Research</p>
+          <h2>研究方向</h2>
+        </div>
+        <div class="research-grid">
+          <article>
+            <h3>Sparse array design</h3>
+            <p>探索稀疏陣列配置、自由度與成像或估測效能之間的關係。</p>
+          </article>
+          <article>
+            <h3>Signal processing</h3>
+            <p>整理通訊與陣列訊號處理中的模型、演算法與模擬工具。</p>
+          </article>
+          <article>
+            <h3>Array optimization</h3>
+            <p>以最佳化方法搜尋具備限制條件的陣列結構與效能指標。</p>
+          </article>
+          <article>
+            <h3>Wireless communications</h3>
+            <p>建立無線通訊系統模擬與分析，連結理論與實驗結果。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="content-section">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>專案</h2>
+        </div>
+        <div id="projectList" class="item-list" aria-live="polite"></div>
+      </section>
+
+      <section id="publications" class="content-section section-band">
+        <div class="section-heading">
+          <p class="eyebrow">Publications</p>
+          <h2>論文與發表</h2>
+        </div>
+        <div id="publicationList" class="item-list" aria-live="polite"></div>
+      </section>
+
+      <section id="contact" class="content-section contact-section">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>聯絡方式</h2>
+        </div>
+        <div class="contact-layout">
+          <p>
+            歡迎透過 email 或 GitHub 聯絡我。正式上線前，記得把 email、CV 連結與社群連結替換成你的真實資料。
+          </p>
+          <div class="contact-links">
+            <a href="mailto:your.email@example.com">your.email@example.com</a>
+            <a href="https://github.com/cat610933">github.com/cat610933</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Cheng-Hsuan Chien. Built with static HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
