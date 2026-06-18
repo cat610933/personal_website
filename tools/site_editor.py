@@ -13,6 +13,7 @@ TUTORIAL_DIR = ROOT / "tutorials"
 PROJECT_DIR = ROOT / "projects"
 ASSET_DIRS = {
     "code": ROOT / "assets" / "code",
+    "cv": ROOT / "assets" / "cv",
     "downloads": ROOT / "assets" / "downloads",
     "formulas": ROOT / "assets" / "formulas",
     "images": ROOT / "assets" / "images",
@@ -349,6 +350,7 @@ EDITOR_HTML = r"""<!doctype html>
                 Folder
                 <select id="assetFolder">
                   <option value="pdfs">PDFs</option>
+                  <option value="cv">CV</option>
                   <option value="code">Code</option>
                   <option value="images">Images</option>
                   <option value="downloads">Downloads</option>

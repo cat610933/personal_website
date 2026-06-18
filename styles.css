@@ -248,9 +248,12 @@ h3 {
   background: rgba(255, 255, 255, 0.58);
 }
 
-.button[aria-disabled="true"] {
+.button[aria-disabled="true"],
+.button.is-disabled {
   color: var(--muted);
   cursor: not-allowed;
+  opacity: 0.58;
+  pointer-events: none;
 }
 
 .hero-visual {
@@ -512,6 +515,10 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
+}
+
+.pdf-frame.cv-frame {
+  min-height: min(960px, 86vh);
 }
 
 .resource-grid {

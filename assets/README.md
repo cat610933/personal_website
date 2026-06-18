@@ -3,6 +3,7 @@
 Use this folder for files that tutorial pages or project pages include.
 
 - `code/`: runnable scripts, notebooks, and small reproducible examples
+- `cv/`: CV PDF for the homepage CV link
 - `images/`: figures, diagrams, screenshots, and exported plots
 - `pdfs/`: PDF notes or papers that can be embedded in tutorial pages
 - `downloads/`: downloadable bundles such as zip files or datasets

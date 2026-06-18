@@ -69,8 +69,9 @@ http://localhost:8099/editor
 - code、圖片、PDF、下載包、公式等素材可分別放在 `assets/code/`、`assets/images/`、`assets/pdfs/`、`assets/downloads/`、`assets/formulas/`。
 - 首頁個人照放在 `assets/images/profile/profile.jpg`。
 - 首頁小 icon 放在 `assets/images/icon/icon.png`。
+- CV PDF 放在 `assets/cv/cv.pdf`，放進去後首頁 CV 按鈕會自動啟用。
 - 如果要公開 email，可以在 `index.html` 的 Contact 區塊加入 `mailto:` 連結。
-- 如果之後有 CV PDF，可以放到 repo 裡，例如 `assets/cv.pdf`，再把 CV 按鈕連到該檔案。
+- 如果之後有 CV PDF，請放到 `assets/cv/cv.pdf`。
 
 ## 免費上線方式：GitHub Pages
 
@@ -168,3 +169,19 @@ assets/pdfs/my-note.pdf
 ```
 
 Project 頁面也使用同樣邏輯。可以從 `projects/_template.html` 複製，或直接用 `make editor` 在 GUI 裡新增。Project / Tutorial 卡片都支援可選的 GitHub 連結；沒有填 GitHub 也可以正常顯示。
+
+## CV
+
+把 CV PDF 放成這個固定檔名：
+
+```text
+assets/cv/cv.pdf
+```
+
+放好後：
+
+- 首頁的 `CV` 按鈕會自動啟用。
+- `cv.html` 會直接在頁面中預覽 PDF。
+- `cv.html` 也有 Download CV 連結。
+
+也可以用 `make editor` 上傳到 `CV` 資料夾。若檔名不是 `cv.pdf`，請改名成 `cv.pdf`，首頁按鈕才會自動偵測。

@@ -137,6 +137,23 @@ function setupImageFallbacks() {
   });
 }
 
+async function setupCvLink() {
+  const link = document.querySelector(".cv-link");
+  if (!link) return;
+
+  try {
+    const response = await fetch("assets/cv/cv.pdf", {
+      method: "HEAD",
+      cache: "no-store",
+    });
+    if (!response.ok) return;
+    link.classList.remove("is-disabled");
+    link.removeAttribute("aria-disabled");
+  } catch {
+    // Keep the CV link disabled until assets/cv/cv.pdf exists.
+  }
+}
+
 function drawSignalCanvas() {
   const canvas = document.getElementById("signalCanvas");
   if (!canvas) return;
@@ -243,6 +260,7 @@ async function initSite() {
   });
 
   setupImageFallbacks();
+  setupCvLink();
   document.getElementById("year").textContent = new Date().getFullYear();
   setLanguage(currentLanguage);
 }
